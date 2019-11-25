@@ -1,1 +1,1 @@
-"# RLE"  
+"# RLE CODING AND DECODING"  
