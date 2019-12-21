@@ -1,9 +1,4 @@
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-fh = fso.OpenTextFile("output.txt");
-let str = fh.ReadAll();
-fh.Close();
-fso = new ActiveXObject("Scripting.FileSystemObject");
-fh = fileAccess.OpenTextFile("codeEscape.txt", 2, true);
+let str = '##a#*bccc'
 let result = [];
 for (let i = 0; i < str.length; i++) {
     if (str[i] == '#'){
@@ -17,5 +12,4 @@ for (let i = 0; i < str.length; i++) {
     }
 }
 let finalStr = result.join('');
-fh.Write(finalStr);
-fh.Close();
+console.log(finalStr)
