@@ -1,9 +1,4 @@
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-fh = fso.OpenTextFile("input.txt");
-let str = fh.ReadAll();
-fh.Close();
-fso = new ActiveXObject("Scripting.FileSystemObject");
-fh = fileAccess.OpenTextFile("codeEscape.txt", 2, true);
+let str = 'aaaaaaaaaaaabbbbbbbbbbbbbbbbccc'
 let result = [];
 for (let i = 0; i < str.length; i++) {
     let count = 1;
@@ -36,14 +31,13 @@ for (let i = 0; i < str.length; i++) {
             count++;
             i++;
         }
-		while (count > 255){
-			result.push('#' + String.fromCharCode(255) + str[i])
-			count -= 255;
-		}
-		if (count > 0)
-			result.push('#' + String.fromCharCode(count) + str[i])
+        while (count > 255) {
+            result.push('#' + String.fromCharCode(255) + str[i])
+            count -= 255;
+        }
+        if (count > 0)
+            result.push('#' + String.fromCharCode(count) + str[i])
     }
 }
 let finalStr = result.join('');
-fh.Write(finalStr);
-fh.Close();
+console.log(finalStr)
